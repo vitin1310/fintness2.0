@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+  <link rel="stylesheet" href="login.css">
+  <title>Página de Exemplo - Treiner Schott</title>
+
+  <!-- TEMA MAIS ESCURO (SOMENTE CSS) -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0a0a !important;
+      color: #e0e0e0 !important;
+      font-family: Arial, sans-serif;
+    }
+
+    header, .navbar, main, section, .minha-div, .sobre, .planos, .contato-section, footer {
+      background-color: #111 !important;
+    }
+
+    .navbar, .nav-container {
+      background-color: #0a0a0a !important;
+      border-bottom: 1px solid #222 !important;
+    }
+
+    .nav-link, .nav-logo {
+      color: #ccc !important;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: #ff8c00 !important;
+    }
+
+    h1, h2, h3, h4, .titulo-fogo, .secao-titulo, .bem-vindo, .treiner {
+      color: #ff8c00 !important;
+    }
+
+    .treiner {
+      color: #ffd700 !important;
+    }
+
+    input, textarea, select {
+      background-color: #222 !important;
+      color: #fff !important;
+      border: 1px solid #444 !important;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: none !important;
+      border-color: #ff8c00 !important;
+    }
+
+    .btn-calcular, .btn-plano, .btn-enviar, .btn-contato {
+      background-color: #ff4500 !important;
+      color: white !important;
+    }
+
+    .btn-reset, .btn-limpar {
+      background-color: #333 !important;
+      color: #ff8c00 !important;
+      border: 1px solid #ff8c00 !important;
+    }
+
+    .plano-header.destaque {
+      background: linear-gradient(135deg, #ff4500, #ff8c00) !important;
+    }
+
+    .plano-header.premium {
+      background: linear-gradient(135deg, #ffd700, #ff8c00) !important;
+    }
+
+    .recursos li::before {
+      color: #ff4500 !important;
+    }
+
+    .form-container, .servico-item, .beneficio-item {
+      background-color: #1a1a1a !important;
+      border: 1px solid #333 !important;
+    }
+
+    .resultado-animado {
+      background-color: #1a1a1a !important;
+      color: #fff !important;
+    }
+
+    footer {
+      background-color: #000 !important;
+      color: #666 !important;
+    }
+
+    marquee p {
+      color: #888 !important;
+    }
+
+    /* Garante que imagens mantenham contraste */
+    img {
+      filter: brightness(1.1);
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+    <img src="https://elements-resized.envatousercontent.com/elements-video-cover-images/files/221351366/preview.jpg?w=500&cf_fit=cover&q=85&format=auto&s=e25ad5c4183b1f4fb612383f145476f77a3b232b2443b857f2252fa3d4c72803" 
+         width="100" 
+         height="100" 
+         alt="Logo SCHOTT - Halteres em Chamas" 
+         class="logo-img">
+</div>
+<h1 class="titulo-fogo-principal">
+  <span class="bem-vindo">BEM-VINDO À</span>
+  <span class="treiner">TREINER SCHOTT</span>
+</h1>        <nav id="navbar" class="navbar animate">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo typing">SCHOTT</a>
+    <ul class="nav-menu">
+      <li class="nav-item"><a href="index.html" class="nav-link">início</a></li>
+      <li class="nav-item"><a href="sobre.html" class="nav-link">Sobre</a></li>
+      <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+      <li class="nav-item"><a href="planos.html" class="nav-link active">PLANOS</a></li>
+      <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+    </ul>
+    <div class="nav-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
+      
+    </header>
+<div class="centralizar">
+    <h1 class="imagem">
+        <img src="https://wallpapers.com/images/high/gym-background-a9hd9zc86bpujyes.webp" 
+             alt="SCHOTT - Força, Foco, Resultado" 
+             width="612" 
+             height="256" 
+             class="imagem-principal">
+    </h1>
+</div>
+    
+    <main>
+        <!-- MENU FIXO (CENTRALIZADO) -->
+<nav id="navbar" class="navbar animate" style="text-align: center; padding: 15px 0;">
+  <div class="nav-container" style="display: inline-block;">
+    <a href="index.html" 
+       class="nav-logo typing" 
+       id="frase-animada"
+       style="font-size: 1.1rem; color: #ff8c00; font-weight: bold; letter-spacing: 1px; text-shadow: 0 0 10px #ff4500;">
+      COM PERSISTÊNCIA SE ALCANÇA QUALQUER LUGAR, FOCO
+    </a>
+  </div>
+
+  <!-- Toggle mobile (opcional, mantido à direita) -->
+  <div class="nav-toggle" id="mobile-menu" style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%);">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+          <div class="minha-div">
+              
+        <section id="home">
+  <h2 class="secao-titulo">NOSSOS SERVIÇOS</h2>
+
+  <div class="servicos-lista">
+    <!-- SERVIÇO 1 -->
+    <div class="servico-item" data-delay="0.1" onclick="redirecionar('consultoria.html')">
+      <img src="https://cdn-icons-png.flaticon.com/64/1042/1042198.png" alt="Ícone de consultoria" class="icone-animado">
+      <span class="texto-animado">
+        Página dedicada à consultoria de treinos com o personal <strong>SCHOTT</strong>.
+      </span>
+    </div>
+
+    <!-- SERVIÇO 2 -->
+    <div class="servico-item" data-delay="0.2" onclick="abrirWhatsApp('Olá! Quero consultoria online')">
+      <img src="https://cdn-icons-png.flaticon.com/64/1042/1042200.png" alt="Ícone de consultoria online" class="icone-animado">
+      <span class="texto-animado">Consultoria on-line esportiva</span>
+    </div>
+
+    <!-- SERVIÇO 3 -->
+    <div class="servico-item" data-delay="0.3" onclick="redirecionar('objetivos.html')">
+      <img src="https://cdn-icons-png.flaticon.com/64/1042/1042202.png" alt="Ícone de objetivos" class="icone-animado">
+      <span class="texto-animado">Alcance o seu objetivo</span>
+    </div>
+
+    <!-- SERVIÇO 4 -->
+    <div class="servico-item" data-delay="0.4" onclick="redirecionar('treinos.html')">
+      <img src="https://cdn-icons-png.flaticon.com/64/1042/1042204.png" alt="Ícone de treinos" class="icone-animado">
+      <span class="texto-animado">Treinos Personalizados</span>
+    </div>
+
+    <!-- SERVIÇO 5 -->
+    <div class="servico-item" data-delay="0.5" onclick="redirecionar('musculacao.html')">
+      <img src="https://cdn-icons-png.flaticon.com/64/1042/1042206.png" alt="Ícone de musculação" class="icone-animado">
+      <span class="texto-animado">Musculação</span>
+    </div>
+
+    <!-- SERVIÇO 6 -->
+    <div class="servico-item" data-delay="0.6" onclick="redirecionar('corrida.html')">
+      <img src="https://cdn-icons-png.flaticon.com/64/1042/1042208.png" alt="Ícone de corrida" class="icone-animado">
+      <span class="texto-animado">Planilhas de Corrida</span>
+    </div>
+  </div>
+</section>
+          </div>
+        <div class="imagem2"><img src="https://www.mprassessoria.com.br/wp-content/uploads/2024/02/banner-site3-copiar-1024x373.png" alt="imagem2"></div>
+       <!-- TÍTULO -->
+<h2 class="beneficios animate">10 BENEFÍCIOS DE PRATICAR ATIVIDADE FÍSICA EM GRUPO</h2>
+
+<!-- LISTA DE BENEFÍCIOS -->
+<div class="beneficios-lista">
+  <!-- 1 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042198.png" alt="Ícone de motivação e disciplina">
+    <div>
+      <strong>1. Aumento da motivação e disciplina</strong>
+      <span class="descricao">Compromisso social: Quando você se compromete a participar de uma atividade em grupo, geralmente há um maior senso de responsabilidade. Você não quer faltar e deixar os outros na mão. Motivação extrínseca: A presença de outros participantes e a observação de seus progressos podem motivá-lo a alcançar suas próprias metas. Estrutura e regularidade: Aulas em grupo têm horários fixos e estrutura de atividades.</span>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042200.png" alt="Ícone de amizade e interação social">
+    <div>
+      <strong>2. Aspecto social e interação</strong>
+      <span class="descricao">Promoção de laços sociais: A atividade física em grupo facilita a formação de novas amizades. Redução do estresse e aumento do bem-estar: Interagir com outras pessoas durante o exercício libera endorfinas e melhora o humor.</span>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042202.png" alt="Ícone de espírito de equipe">
+    <div>
+      <strong>3. Desenvolvimento de um espírito de equipe</strong>
+      <span class="descricao">Cooperação e trabalho em equipe: Atividades como esportes coletivos ajudam a desenvolver habilidades de comunicação e confiança mútua.</span>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042204.png" alt="Ícone de compromisso e responsabilidade">
+    <div>
+      <strong>4. Aumento da responsabilidade e compromisso</strong>
+      <span class="descricao">Responsabilidade mútua: Os participantes se sentem mais responsáveis uns pelos outros. Suporte social: O grupo incentiva a voltar mesmo após faltas.</span>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042206.png" alt="Ícone de diversão e prazer">
+    <div>
+      <strong>5. Diversão e prazer</strong>
+      <span class="descricao">Maior diversão: Muitas pessoas acham mais divertido treinar em grupo. Variedade de exercícios: Aulas como HIIT, Zumba ou spinning tornam a prática menos monótona.</span>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042208.png" alt="Ícone de desafios e superação">
+    <div>
+      <strong>6. Desafios e superação</strong>
+      <span class="descricao">Estímulo a se esforçar mais: O grupo inspira a superar limites. Apoio coletivo em momentos difíceis: Fundamental em treinos intensos ou maratonas.</span>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042198.png" alt="Ícone de orientação profissional">
+    <div>
+      <strong>7. Acessibilidade e orientação profissional</strong>
+      <span class="descricao">Aulas com orientação especializada: Instrutores ensinam técnica correta. Ajuste para todos os níveis: Alternativas para iniciantes e avançados.</span>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042200.png" alt="Ícone de redução de esforço percebido">
+    <div>
+      <strong>8. Redução da sensação de esforço</strong>
+      <span class="descricao">Mais fácil passar o tempo: A música e interação desviam a atenção do cansaço. Ambiente positivo e de apoio: Torna o exercício mais agradável.</span>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042202.png" alt="Ícone de saúde mental">
+    <div>
+      <strong>9. Apoio à saúde mental</strong>
+      <span class="descricao">Redução de sintomas de depressão e ansiedade: O exercício em grupo tem efeito terapêutico. Aumento da confiança: Celebração coletiva melhora a autoestima.</span>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="beneficio-item">
+    <img src="https://cdn-icons-png.flaticon.com/32/1042/1042204.png" alt="Ícone de desempenho e consistência">
+    <div>
+      <strong>10. Melhora no desempenho e consistência</strong>
+      <span class="descricao">Competição amigável: Estimula melhora constante. Progressão constante: O grupo evolui junto, incentivando dedicação.</span>
+    </div>
+  </div>
+</div>
+
+        
+        <div class="sobre">
+            <section id="sobre">
+                <div class
+                <header>
+                    <h2>Sobre</h2>
+                </header>
+
+               
+                <section class="corrida">
+                    <h3>CORRIDA</h3>
+                    <p>Planilha para 5KM</p>
+                    <img src="https://do1pouckcwxot.cloudfront.net/brasil/uploads/2017/09/14180026/planilha-170.jpg" 
+                         alt="Planilha de Corrida para 5KM" width="300" class="imagem-corrida">
+                </section>
+
+                <div class="form-container">
+    <h1 class="titulo-fogo">CALCULADOR SCHOTT</h1>
+    <p class="sub">IMC • TMB • GASTO DIÁRIO • RECOMENDAÇÃO</p>
+
+    <form id="formulario">
+        <label>Sexo:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="sexo" value="M" required> Masculino</label>
+            <label><input type="radio" name="sexo" value="F"> Feminino</label>
+        </div>
+
+        <label for="idade">Idade (anos):</label>
+        <input type="number" id="idade" placeholder="Ex: 28" min="15" max="80" required>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" placeholder="Ex: 75" required>
+
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" placeholder="Ex: 1.75" step="0.01" required>
+
+        <label for="atividade">Nível de Atividade:</label>
+        <select id="atividade" required>
+            <option value="">Selecione...</option>
+            <option value="1.2">Sedentário (pouco ou nenhum exercício)</option>
+            <option value="1.375">Levemente ativo (1-3 dias/semana)</option>
+            <option value="1.55">Moderadamente ativo (3-5 dias)</option>
+            <option value="1.725">Muito ativo (6-7 dias)</option>
+            <option value="1.9">Extremamente ativo (atleta)</option>
+        </select>
+
+        <div class="botoes">
+            <button type="submit" class="btn-calcular">CALCULAR TUDO</button>
+            <button type="button" class="btn-reset" onclick="resetar()">LIMPAR</button>
+        </div>
+    </form>
+
+    <div id="resultado" class="resultado-animado"></div>
+</div>
+        <script>
+// CALCULADOR SCHOTT - IMC + TMB + GASTO
+const form = document.getElementById('formulario');
+const resultado = document.getElementById('resultado');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const sexo = document.querySelector('input[name="sexo"]:checked').value;
+    const idade = parseFloat(document.getElementById('idade').value);
+    const peso = parseFloat(document.getElementById('peso').value);
+    const altura = parseFloat(document.getElementById('altura').value) * 100; // cm
+    const atividade = parseFloat(document.getElementById('atividade').value);
+
+    // IMC
+    const imc = (peso / ((altura/100) ** 2)).toFixed(1);
+    let classificacao = '';
+    let cor = '';
+
+    if (imc < 18.5) { classificacao = 'Abaixo do peso'; cor = '#ffcc00'; }
+    else if (imc < 25) { classificacao = 'Peso normal'; cor = '#00ff00'; }
+    else if (imc < 30) { classificacao = 'Sobrepeso'; cor = '#ff9900'; }
+    else if (imc < 35) { classificacao = 'Obesidade grau I'; cor = '#ff6600'; }
+    else if (imc < 40) { classificacao = 'Obesidade grau II'; cor = '#ff3300'; }
+    else { classificacao = 'Obesidade grau III'; cor = '#cc0000'; }
+
+    // TMB (Harris-Benedict revisada)
+    let tmb;
+    if (sexo === 'M') {
+        tmb = 88.362 + (13.397 * peso) + (4.799 * altura) - (5.677 * idade);
+    } else {
+        tmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * idade);
+    }
+    tmb = Math.round(tmb);
+
+    // Gasto Total
+    const gasto = Math.round(tmb * atividade);
+
+    // Resultado
+    resultado.innerHTML = `
+        <h3>SEUS RESULTADOS</h3>
+        <p><strong>IMC:</strong> <span class="valor">${imc}</span></p>
+        <p class="classificacao" style="background:${cor}20; color:${cor};">${classificacao}</p>
+        
+        <p><strong>TMB (repouso):</strong> <span class="valor">${tmb}</span> kcal/dia</p>
+        <p><strong>Gasto Diário:</strong> <span class="valor">${gasto}</span> kcal/dia</p>
+        
+        <映画<p><em>Baseado em ${atividade == 1.2 ? 'sedentário' : atividade == 1.9 ? 'atleta' : 'atividade moderada'}.</em></p>
+        
+        <a href="#" class="btn-whatsapp" onclick="enviarWhatsApp(${imc}, '${classificacao}', ${tmb}, ${gasto})">
+            ENVIAR RESULTADO NO WHATSAPP
+        </a>
+    `;
+
+    resultado.classList.add('mostrar');
+});
+
+function resetar() {
+    form.reset();
+    resultado.classList.remove('mostrar');
+    setTimeout(() => { resultado.innerHTML = ''; }, 600);
+}
+
+function enviarWhatsApp(imc, classe, tmb, gasto) {
+    const sexo = document.querySelector('input[name="sexo"]:checked').labels[0].textContent.trim();
+    const idade = document.getElementById('idade').value;
+    const peso = document.getElementById('peso').value;
+    const altura = document.getElementById('altura').value;
+    const nivel = document.getElementById('atividade').selectedOptions[0].text;
+
+    const msg = `*SCHOTT - SEU DIAGNÓSTICO*\n\n` +
+                `Sexo: ${sexo}\n` +
+                `Idade: ${idade} anos\n` +
+                `Peso: ${peso} kg\n` +
+                `Altura: ${altura} m\n` +
+                `Atividade: ${nivel}\n\n` +
+                `*IMC:* ${imc} → *${classe}*\n` +
+                `*TMB:* ${tmb} kcal\n` +
+                `*Gasto Diário:* ${gasto} kcal\n\n` +
+                `Quero meu plano personalizado!`;
+
+    const numero = "5511999999999"; // COLOQUE SEU NÚMERO
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+</script>
+    </form>
+
+    <div id="resultado" class="resultado-animado"></div>
+</div>
+                
+                <section class="musculacao">
+                    <h3>MUSCULAÇÃO</h3>
+                    <p>Divisão para 5 dias de treino:</p>
+                    <ul>
+                        <li>Segunda-feira: peitoa tríceps e ombro</li>
+                        <li>Terça-feira: costas e bíceps</li>
+                        <li>Quarta-feira: descanso</li>
+                        <li>Quinta-feira: perna e abdômen</li>
+                        <li>Sexta-feira: peito, tríceps e ombro</li>
+                        <li>Sábado: costas e bíceps</li>
+                        <li>Domingo: corrida</li>
+                    </ul>
+                    <h3>Detalhamento de Exercícios</h3>
+                    <p>Consulte seu educador físico para adaptação de exercícios e cargas.</p>
+                </section>
+            </section>
+        </div>
+
+        <header>
+            <
+
+<!-- TÍTULO -->
+<h2 class="secao-titulo">ESCOLHA SEU PLANO</h2>
+
+<!-- SEÇÃO PLANOS -->
+<section class="planos">
+  <!-- PLANO 1 -->
+  <div class="plano" id="plano1">
+    <div class="plano-header">
+      <h2>Plano Básico</h2>
+      <p class="preco">R$ 19,99<span>/mês</span></p>
+    </div>
+    <ul class="recursos">
+      <li>Treino + Dieta</li>
+      <li>Montado em até 24h</li>
+      <li>Acompanhamento quinzenal</li>
+      <li>Recursos básicos</li>
+      <li>Ideal para iniciantes abaixo do peso</li>
+    </ul>
+    <button class="btn-plano" onclick="abrirPagamento('Básico', 19.99, 'plano1')">ESCOLHER</button>
+  </div>
+
+  <!-- PLANO 2 -->
+  <div class="plano" id="plano2">
+    <div class="plano-header destaque">
+      <h2>Plano Intermediário</h2>
+      <p class="preco">R$ 39,99<span>/mês</span></p>
+      <span class="badge">MAIS POPULAR</span>
+    </div>
+    <ul class="recursos">
+      <li>Treino + Dieta</li>
+      <li>Dúvidas respondidas em até 24h (seg-sex)</li>
+      <li>Acompanhamento semanal</li>
+      <li>Recursos intermediários</li>
+      <li>Ideal para iniciantes acima do peso</li>
+    </ul>
+    <button class="btn-plano" onclick="abrirPagamento('Intermediário', 39.99, 'plano2')">ESCOLHER</button>
+  </div>
+
+  <!-- PLANO 3 -->
+  <div class="plano" id="plano3">
+    <div class="plano-header premium">
+      <h2>Plano Avançado</h2>
+      <p class="preco">R$ 79,99<span>/mês</span></p>
+    </div>
+    <ul class="recursos">
+      <li>Curso de Dieta</li>
+      <li>Curso de Suplementação</li>
+      <li>Curso de Treino</li>
+      <li>Certificado ao final</li>
+      <li>Acesso 24h</li>
+      <li>Todos os recursos</li>
+    </ul>
+    <button class="btn-plano" onclick="abrirPagamento('Avançado', 79.99, 'plano3')">ESCOLHER</button>
+  </div>
+</section>
+
+<!-- MODAL DE PAGAMENTO -->
+<div id="modal-pagamento" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <h2 id="modal-titulo">Pagamento - Plano Básico</h2>
+    <p id="modal-preco">R$ 19,99/mês</p>
+
+    <div class="metodos-pagamento">
+      <button class="metodo-btn pix" onclick="mostrarPix()">PIX</button>
+      <button class="metodo-btn cartao" onclick="mostrarCartao()">CARTÃO</button>
+      <button class="metodo-btn boleto" onclick="mostrarBoleto()">BOLETO</button>
+    </div>
+
+    <!-- PIX -->
+    <div id="pix-content" class="pagamento-detalhe">
+      <h3>Pague com Pix</h3>
+      <img src="https://i.imgur.com/9g9g9g9.png" alt="QR Code Pix" class="qr-code">
+      <p><strong>Chave:</strong> treinerschott@gmail.com</p>
+      <p><small>Escaneie com o app do banco</small></p>
+      <button class="btn-confirmar" onclick="confirmarPix()">PAGAMENTO CONCLUÍDO</button>
+    </div>
+
+    <!-- CARTÃO -->
+    <div id="cartao-content" class="pagamento-detalhe" style="display:none;">
+      <h3>Pague com Cartão</h3>
+      <form id="form-cartao">
+        <input type="text" placeholder="Número do Cartão" required>
+        <input type="text" placeholder="Nome no Cartão" required>
+        <div style="display:flex;gap:10px;">
+          <input type="text" placeholder="MM/AA" style="width:50%" required>
+          <input type="text" placeholder="CVV" style="width:50%" required>
+        </div>
+        <button type="submit" class="btn-confirmar">PAGAR AGORA</button>
+      </form>
+    </div>
+
+    <!-- BOLETO -->
+    <div id="boleto-content" class="pagamento-detalhe" style="display:none;">
+      <h3>Pague com Boleto</h3>
+      <p>Boleto gerado em até 5 minutos.</p>
+      <button class="btn-confirmar" onclick="gerarBoleto()">GERAR BOLETO</button>
+    </div>
+  </div>
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* style.css embutido */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #f0f0f0;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #c00;
+      padding: 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.02);
+    }
+
+    .section {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      border: 1px solid #333;
+    }
+
+    .section h2 {
+      color: #c00;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #c00;
+      padding-bottom: 0.5rem;
+    }
+
+    .techniques {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .technique-card {
+      background: #2a2a2a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .technique-card:hover {
+      background: #333;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(204, 0, 0, 0.2);
+    }
+
+    .technique-card h3 {
+      color: #ff4444;
+      margin-bottom: 0.5rem;
+    }
+
+    .technique-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      background: #111;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .hero img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Brazilian Jiu-Jitsu</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="hero">
+      <img src="https://t4.ftcdn.net/jpg/01/80/03/25/360_F_180032586_jBXYCBxmGrylOhuyPmMA2PlJVcDGQijz.jpg" 
+           alt="Técnica de Jiu-Jitsu Brasileiro - Ilustração Vetorial">
+      <p style="margin-top: 1rem; font-style: italic; color: #aaa;">
+        Treinamento focado em técnica, controle e finalização.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>📋 Estrutura do Treinamento Semanal</h2>
+      <p>Nosso programa é dividido em fases para garantir evolução constante:</p>
+      <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+        <li><strong>Segunda/Quarta:</strong> Posicional + Drill técnico</li>
+        <li><strong>Terça/Quinta:</strong> Finalizações do guard + escapes</li>
+        <li><strong>Sexta:</strong> Rolação específica + situational sparring</li>
+        <li><strong>Sábado:</strong> Open mat + revisão semanal</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>🔥 Técnicas em Destaque</h2>
+      <div class="techniques">
+        <div class="technique-card" onclick="showAlert('Armbar do Guard Fechado')">
+          <h3>Armbar do Guard Fechado</h3>
+          <p>Controle do braço, giro do quadril e finalização precisa.</p>
+        </div>
+        <div class="technique-card" onclick="showAlert('Triângulo')">
+          <h3>Triângulo</h3>
+          <p>Posicionamento das pernas e squeeze com força controlada.</p>
+        </div>
+        <div class="technique-card" onclick="showAlert('Passagem de Guard com Knee Cut')">
+          <h3>Passagem Knee Cut</h3>
+          <p>Controle de quadril e pressão lateral para dominar a posição.</p>
+        </div>
+        <div class="technique-card" onclick="showAlert('Mata-Leão pelas Costas')">
+          <h3>Mata-Leão</h3>
+          <p>Ganchos, seatbelt e compressão gradual do pescoço.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>💡 Dicas para Evolução</h2>
+      <p>
+        <strong>1.</strong> Foque na <em>respiração</em> durante o rola.<br>
+        <strong>2.</strong> Filme seus treinos e analise os erros.<br>
+        <strong>3.</strong> Treine com parceiros de níveis diferentes.<br>
+        <strong>4.</strong> Estude os conceitos, não só os movimentos.
+      </p>
+    </div>
+
+  </div>
+        
+        <section id="contato" class="contato-section">
+  <div class="contato-container">
+    
+    <h2 class="titulo-fogo">FALE COMIGO</h2>
+    <p class="subtitulo">Entre em contato para mais informações sobre consultoria, treinos ou planos personalizados.</p>
+
+    <!-- IMAGEM DECORATIVA -->
+    <div class="contato-imagem">
+      <img src="https://img.freepik.com/vetores-gratis/modelo-de-plano-de-fundo-de-informacoes-de-contato-de-mao-desenhada_23-2148192395.jpg" 
+           alt="Contato SCHOTT - Consultoria de Treinos" loading="lazy">
+    </div>
+
+    <!-- LINKS RÁPIDOS -->
+    <div class="contato-links">
+      <a href="https://linktr.ee/trainermateusschott" target="_blank" class="btn-contato linktree">
+        ACESSAR CONSULTORIA
+      </a>
+      <a href="mailto:treinerschott@gmail.com" class="btn-contato email">
+        treinerschott@gmail.com
+      </a>
+      <a href="https://wa.me/5511999999999" target="_blank" class="btn-contato whatsapp">
+        FALAR NO WHATSAPP
+      </a>
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <h4 class="form-titulo">Envie sua mensagem:</h4>
+    <form id="form-contato" class="form-contato">
+      <div class="campo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" placeholder="Seu nome" required>
+      </div>
+      <div class="campo">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="seu@email.com" required>
+      </div>
+      <div class="campo">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" rows="5" placeholder="Escreva sua dúvida ou solicitação..." required></textarea>
+      </div>
+      <div class="botoes-form">
+        <button type="submit" class="btn-enviar">ENVIAR AGORA</button>
+        <button type="reset" class="btn-limpar">LIMPAR</button>
+      </div>
+      <div id="status-mensagem"></div>
+    </form>
+  </div>
+</section>
+    </main>
+
+    <footer>
+        <marquee><p>© 2025 Treiner Schott. Todos os direitos reservados.</p></marquee>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- BOTÃO FUNCIONAL COM JS -->
+
+<script>
+// REDIRECIONAMENTOS GLOBAIS
+function redirecionar(pagina) {
+    document.body.style.transition = 'opacity 0.4s';
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        window.location.href = pagina;
+    }, 400);
+}
+
+function abrirWhatsApp(mensagem) {
+    const numero = "5511999999999";
+    const texto = encodeURIComponent(mensagem);
+    window.open(`https://wa.me/${numero}?text=${texto}`, '_blank');
+}
+
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1';
+});
+
+// ABRIR MODAL DE PAGAMENTO
+function abrirPagamento(plano, preco, id) {
+  document.getElementById('modal-titulo').innerText = `Pagamento - Plano ${plano}`;
+  document.getElementById('modal-preco').innerText = `R$ ${preco.toFixed(2).replace('.',',')}/mês`;
+  document.getElementById('modal-pagamento').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+
+  // Resetar métodos
+  document.querySelectorAll('.pagamento-detalhe').forEach(el => el.style.display = 'none');
+  document.getElementById('pix-content').style.display = 'block';
+}
+
+// FECHAR MODAL
+function fecharModal() {
+  document.getElementById('modal-pagamento').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// MOSTRAR MÉTODOS
+function mostrarPix() { trocarVisivel('pix-content'); }
+function mostrarCartao() { trocarVisivel('cartao-content'); }
+function mostrarBoleto() { trocarVisivel('boleto-content'); }
+
+function trocarVisivel(id) {
+  document.querySelectorAll('.pagamento-detalhe').forEach(el => el.style.display = 'none');
+  document.getElementById(id).style.display = 'block';
+}
+
+// CONFIRMAR PIX
+function confirmarPix() {
+  alert('Pagamento via Pix recebido! Plano ativado.');
+  fecharModal();
+  setTimeout(() => window.location.href = 'dashboard.html', 1000);
+}
+
+// GERAR BOLETO
+function gerarBoleto() {
+  alert('Boleto gerado! Verifique seu email.');
+  fecharModal();
+}
+
+// CARTÃO (SIMULAÇÃO)
+document.getElementById('form-cartao')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Pagamento com cartão aprovado! Plano ativado.');
+  fecharModal();
+});
+
+// FECHAR COM ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') fecharModal();
+});
+
+    // script.js embutido
+    function showAlert(technique) {
+      alert(`Você clicou em: ${technique}\n\nEm breve: vídeo explicativo!`);
+    }
+
+    // Animação suave ao rolar
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</script>
+</body>
+</html>

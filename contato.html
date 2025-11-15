@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Treiner Schott</title>
+
+  <!-- FONT AWESOME (ícones de fogo) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- SEUS ESTILOS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+
+  <!-- ESTILO FOGO ESPECÍFICO PARA CONTATO -->
+  <style>
+    /* === SEÇÃO CONTATO EM CHAMAS === */
+    #contato {
+      max-width: 900px;
+      margin: 100px auto 60px;
+      padding: 40px;
+      background: linear-gradient(135deg, #1a1a1a, #111);
+      border-radius: 20px;
+      box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.6),
+        0 0 25px rgba(255, 69, 0, 0.2);
+      border: 1px solid #333;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #contato::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at center, rgba(255, 69, 0, 0.1), transparent 70%);
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    #contato:hover::before {
+      opacity: 1;
+    }
+
+    /* TÍTULOS */
+    #contato h2 {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #ff4500;
+      text-shadow: 
+        0 0 15px #ff4500,
+        0 0 25px #ff8c00;
+      margin-bottom: 15px;
+      animation: pulsar 2s infinite alternate;
+    }
+
+    #contato h4 {
+      color: #ff8c00;
+      font-size: 1.4rem;
+      margin: 30px 0 15px;
+    }
+
+    #contato p {
+      font-size: 1.1rem;
+      color: #ddd;
+      margin: 15px 0;
+      line-height: 1.7;
+    }
+
+    /* LINKS */
+    #contato a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    #contato a:hover {
+      color: #ff4500;
+      text-shadow: 0 0 15px #ff4500;
+    }
+
+    #contato a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #ff4500;
+      transition: width 0.3s;
+    }
+
+    #contato a:hover::after {
+      width: 100%;
+    }
+
+    /* IMAGEM */
+    #contato img {
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 3px solid #ff4500;
+      box-shadow: 0 10px 30px rgba(255, 69, 0, 0.3);
+      margin: 20px 0;
+      transition: all 0.4s;
+    }
+
+    #contato img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(255, 69, 0, 0.5);
+      border-color: #ff8c00;
+    }
+
+    /* FORMULÁRIO */
+    #form-contato {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #form-contato label {
+      text-align: left;
+      color: #ff8c00;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    #form-contato textarea {
+      width: 100%;
+      padding: 14px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid #444;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1rem;
+      resize: vertical;
+      transition: all 0.3s;
+    }
+
+    #form-contato textarea:focus {
+      outline: none;
+      border-color: #ff4500;
+      box-shadow: 0 0 15px rgba(255, 69, 0, 0.3);
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* BOTÕES EM CHAMAS */
+    #form-contato button {
+      background: linear-gradient(135deg, #ff4500, #ff6500);
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #form-contato button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 69, 0, 0.6);
+    }
+
+    #form-contato button:active {
+      transform: translateY(1px);
+    }
+
+    .resetar button {
+      background: #333 !important;
+      color: #ff8c00 !important;
+      border: 1px solid #ff8c00 !important;
+    }
+
+    .resetar button:hover {
+      background: #444 !important;
+      color: #fff !important;
+      border-color: #fff !important;
+    }
+
+    /* ANIMAÇÃO PULSAR */
+    @keyframes pulsar {
+      0% { text-shadow: 0 0 10px #ff4500; }
+      100% { text-shadow: 0 0 25px #ff8c00, 0 0 35px #ff4500; }
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      #contato {
+        margin: 80px 15px 40px;
+        padding: 25px;
+      }
+      #contato h2 { font-size: 2.2rem; }
+      #contato img { width: 180px; height: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR (use a mesma do index.html) -->
+  <nav id="navbar" class="navbar">
+    <!-- ... seu menu aqui ... -->
+  </nav>
+
+  <main>
+    <section id="contato">
+      <h2><i class="fas fa-fire"></i> CONTATO</h2>
+      <p>Entre em contato para mais informações sobre nossa consultoria de treinos.</p>
+
+      <img src="https://img.freepik.com/vetores-gratis/modelo-de-plano-de-fundo-de-informacoes-de-contato-de-mao-desenhada_23-2148192395.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1711065600&semt=ais" alt="Contato" width="200" height="200">
+
+      <p>
+        <a href="https://linktr.ee/trainermateusschott?fbclid=PAZXh0bgNhZW0CMTEAAab3tWb-fG9eXiWYtk6ApwPHyjMMXgDNxctDpgtDKNqu56lo1OraCuRquzY_aem_AXynu-6Upu4mZ-hCoer_KiceHt8ZOpg90mLKL-ifSYsxnHrtTUOPmtyEr3qxBYU1jz9i-ifIFkR0b6MChKLBY-ME" target="_blank">
+          <i class="fas fa-link"></i> Clique aqui para ter acesso à nossa consultoria!
+        </a>
+      </p>
+
+      <p>
+        <i class="fas fa-envelope"></i> Email: 
+        <a href="mailto:treinerschott@gmail.com">treinerschott@gmail.com</a>
+      </p>
+
+      <h4><i class="fas fa-paper-plane"></i> Envie sua mensagem:</h4>
+      <form id="form-contato">
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui..." required></textarea>
+
+        <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px;">
+          <button type="submit"><i class="fas fa-paper-plane"></i> ENVIAR</button>
+          <div class="resetar">
+            <button type="reset"><i class="fas fa-undo"></i> RESETAR</button>
+          </div>
+        </div>
+      </form>
+
+      <!-- MENSAGEM DE STATUS -->
+      <div id="status-mensagem" style="margin-top: 20px; font-weight: 600;"></div>
+    </section>
+  </main>
+
+  <!-- SCRIPT PARA ENVIO (opcional) -->
+  <script>
+    document.getElementById('form-contato').addEventListener

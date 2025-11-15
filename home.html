@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Treiner Schott</title>
+
+  <!-- FONT AWESOME (ícones de fogo) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ESTILOS PRINCIPAIS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="login.css">
+
+  <!-- ESTILO FOGO TOTAL (ESPECÍFICO PARA HOME) -->
+  <style>
+    /* === BODY E FUNDO EM CHAMAS === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* === NAVBAR (COPIADA DO INDEX) === */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      padding: 18px 0;
+      box-shadow: 0 8px 25px rgba(255, 69, 0, 0.3);
+      border-bottom: 1px solid rgba(255, 69, 0, 0.3);
+      transition: all 0.4s ease;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-logo {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffd700;
+      text-decoration: none;
+      background: linear-gradient(135deg, #ff4500, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+      animation: logoFlame 3s infinite;
+    }
+
+    @keyframes logoFlame {
+      0%, 100% { filter: hue-rotate(0deg); }
+      50% { filter: hue-rotate(30deg); }
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 8px 16px;
+      border-radius: 12px;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-link i {
+      color: #ffd700;
+      transition: all 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ff4500;
+      background: rgba(255, 69, 0, 0.2);
+      text-shadow: 0 0 15px #ff4500;
+    }
+
+    .nav-link:hover i {
+      color: #ff4500;
+      transform: scale(1.3) rotate(15deg);
+    }
+
+    .nav-link.active {
+      color: #ffd700;
+      background: rgba(255, 69, 0, 0.3);
+      border: 1px solid #ff4500;
+      text-shadow: 0 0 20px #ffd700;
+    }
+
+    .nav-link.active i {
+      color: #ff4500;
+      animation: flamePulse 1.5s infinite;
+    }
+
+    @keyframes flamePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at center, rgba(255, 69, 0, 0.2), transparent);
+      animation: heroFlame 4s infinite;
+    }
+
+    @keyframes heroFlame {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    .hero h1 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffd700, #ff4500, #ff8c00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(255, 69, 0, 0.5);
+      margin-bottom: 20px;
+      animation: entrada 1.5s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin: 20px 0;
+      color: #ddd;
+    }
+
+    .cta-button {
+      background: linear-gradient(135deg, #ff4500, #ff6500);
+      color: white;
+      padding: 16px 40px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 69, 0, 0.5);
+      transition: all 0.4s;
+      margin-top: 30px;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(255, 69, 0, 0.7);
+    }
+
+    /* === SEÇÃO SERVIÇOS === */
+    .servicos {
+      max-width: 1200px;
+      margin: 100px auto;
+      padding: 0 20px;
+    }
+
+    .servicos h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #ff4500;
+      text-shadow: 0 0 20px #ff4500;
+      margin-bottom: 50px;
+    }
+
+    .grid-servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card-servico {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid #333;
+      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-servico::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 5px;
+      background: linear-gradient(90deg, #ff4500, #ffd700);
+    }
+
+    .card-servico i {
+      font-size: 2.5rem;
+      color: #ffd700;
+      margin-bottom: 20px;
+    }
+
+    .card-servico h3 {
+      color: #ff8c00;
+      margin-bottom: 15px;
+    }
+
+    .card-servico:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(255, 69, 0, 0.3);
+      border-color: #ff4500;
+    }
+
+    /* === BENEFÍCIOS === */
+    .beneficios {
+      background: #111;
+      padding: 100px 20px;
+    }
+
+    .beneficios h2 {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #ffd700;
+      text-shadow: 0 0 20px #ffd700;
+      margin-bottom: 60px;
+    }
+
+    .lista-beneficios {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .item-beneficio {
+      background: rgba(255, 69, 0, 0.1);
+      padding: 25px;
+      margin: 20px 0;
+      border-left: 5px solid #ff4500;
+      border-radius: 0 15px 15px 0;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .item-beneficio:hover {
+      transform: translateX(15px);
+      background: rgba(255, 69, 0, 0.2);
+    }
+
+    .item-beneficio::before {
+      content: attr(data-num);
+      position: absolute;
+      left: -45px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #ff4500;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+
+    /* === RESPONSIVO === */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.8rem; }
+      .hero p { font-size: 1.1rem; }
+      .nav-menu { display: none; }
+      .nav-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR EM CHAMAS -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="home.html" class="nav-logo">SCHOTT</a>
+      <ul class="nav-menu">
+        <li><a href="home.html" class="nav-link active"><i class="fas fa-home"></i> INÍCIO</a></li>
+        <li><a href="sobre.html" class="nav-link"><i class="fas fa-user"></i> SOBRE</a></li>
+        <li><a href="contato.html" class="nav-link"><i class="fas fa-envelope"></i> CONTATO</a></li>
+        <li><a href="planos.html" class="nav-link"><i class="fas fa-fire"></i> PLANOS</a></li>
+        <li><a href="login.html" class="nav-link"><i class="fas fa-sign-in-alt"></i> LOGIN</a></li>
+      </ul>
+      <div class="nav-toggle">☰</div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>BEM-VINDO À TREINER SCHOTT</h1>
+    <p>Consultoria online de treinos personalizados. Alcance seus objetivos com musculação, corrida e muito mais.</p>
+    <button class="cta-button">COMEÇAR AGORA</button>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos">
+    <h2>NOSSOS SERVIÇOS</h2>
+    <div class="grid-servicos">
+      <div class="card-servico">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Musculação</h3>
+        <p>Treinos personalizados para hipertrofia e força.</p>
+      </div>
+      <div class="card-servico">
+        <i class="fas fa-running"></i>
+        <h3>Planilhas de Corrida</h3>
+        <p>Programas para iniciantes e maratonistas.</p>
+      </div>
+      <div class="card-servico">
+        <i class="fas fa-clipboard-list"></i>
+        <h3>Consultoria Online</h3>
+        <p>Acompanhamento completo via app e vídeo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="beneficios">
+    <h2>10 BENEFÍCIOS DO TREINO EM GRUPO</h2>
+    <div class="lista-beneficios">
+      <div class="item-beneficio" data-num="1">Aumento da motivação e disciplina</div>
+      <div class="item-beneficio" data-num="2">Aspecto social e interação</div>
+      <div class="item-beneficio" data-num="3">Espírito de equipe</div>
+      <div class="item-beneficio" data-num="4">Responsabilidade mútua</div>
+      <div class="item-beneficio" data-num="5">Mais diversão</div>
+      <div class="item-beneficio" data-num="6">Superação coletiva</div>
+      <div class="item-beneficio" data-num="7">Orientação profissional</div>
+      <div class="item-beneficio" data-num="8">Menos esforço percebido</div>
+      <div class="item-beneficio" data-num="9">Saúde mental</div>
+      <div class="item-beneficio" data-num="10">Melhor desempenho</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
